@@ -1,0 +1,30 @@
+{
+  "name": "twitter",
+  "version": "1.0.0",
+  "description": "This is a twitter clone",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "nodemon --watch server -- node ./server/server.js",
+    "init": "sequelize init",
+    "create:model": "sequelize model:create --name User --attributes first_name:string",
+    "db:migrate": "sequelize db:migrate"
+  },
+  "keywords": [
+    "twitter"
+  ],
+  "author": "Index",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.38.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3",
+    "sequelize-cli": "^4.0.0"
+  }
+}
